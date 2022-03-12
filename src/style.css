@@ -23,6 +23,8 @@
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 5px 5px rgba(255, 153, 0, 0.5);
     min-width: 1000px;
+    transform: translateX(-50px);
+    animation: opacity .5s forwards;
 }
 
 .DisplayTimer {
@@ -41,6 +43,26 @@ p {
     box-shadow: 5px 5px rgba(255, 153, 0, 0.5);
 }
 
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes opacityCredits {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .credits {
     padding: 2vh;
     margin-top: 2vh;
@@ -48,7 +70,24 @@ p {
     font-weight: bold;
     font-size: large;
     border-radius: 20px;
-    background-color: rgb(255, 153, 0);
+    background: linear-gradient(rgb(255, 153, 0), rgb(255, 102, 0));
     text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
-    box-shadow: 3px 3px rgba(255, 153, 0, 0.5);
+    box-shadow: 3px 3px rgba(255, 255, 255, 1);
+    transform: translateX(-50px);
+    animation: opacity .5s forwards;
+}
+
+.ButtonSearch {
+    padding: 2vh;
+    margin-top: 2vh;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 20px;
+    background: linear-gradient(rgb(255, 153, 0), rgb(255, 102, 0));
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px rgba(255, 255, 255, 1);
+    animation: opacityCredits .5s forwards;
+    cursor: pointer;
+    border: 0;
 }

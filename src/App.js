@@ -8,8 +8,21 @@ function App() {
   const [timeHours, settimeHours] = useState('00')
   const [timeMinutes, settimeMinutes] = useState('00')
   const [timeSeconds, settimeSeconds] = useState('00')
+  const [showCredits, setshowCredits] = useState(false)
 
   let interval = useRef();
+
+  function renderCredits() {
+    if (showCredits === true) {
+      return (
+        <>
+          <div className='credits'>
+            <span> Lucas Migueis</span>
+          </div>
+        </>
+      )
+    }
+  }
 
   const startTimer = () => {
 
@@ -27,9 +40,27 @@ function App() {
         clearInterval(interval.current);
       } else {
         settimeDays(days);
-        settimeHours(hours);
-        settimeMinutes(minutes);
-        settimeSeconds(seconds);
+
+        if (hours < 10) {
+          settimeHours('0' + hours);
+        } else {
+          settimeHours(hours);
+        }
+
+        if (minutes < 10) {
+          settimeMinutes('0' + minutes);
+        }
+        else {
+          settimeMinutes(minutes);
+        }
+
+        if (seconds < 10) {
+          settimeSeconds('0' + seconds);
+        }
+        else {
+          settimeSeconds(seconds);
+        }
+
       }
 
     }, 1000)
@@ -42,22 +73,38 @@ function App() {
     };
   })
 
+  function renderTimer() {
+    return (
+      <div className='DisplayTimer'>
+        <p className='Days'>{timeDays} Dias</p>
+        <p className='Time'>{timeHours} : {timeMinutes} : {timeSeconds}</p>
+      </div>
+    )
+
+  }
+
+  function handleShowCredits() {
+    if (showCredits === true) {
+      setshowCredits(false);
+
+    } else {
+      setshowCredits(true);
+
+    }
+  }
+
+
   return (
 
     <div className="container">
-
       <div className='MainTimerContainer'>
         <h1 className='title'>Countdown Tiny Tina's</h1>
-        <div className='DisplayTimer'>
-          <p className='Days'>{timeDays} Dias</p>
-          <p className='Time'>{timeHours} : {timeMinutes} : {timeSeconds}</p>
-        </div>
+        {renderTimer()}
       </div>
-
-      <div className='credits'>
-        <span> Lucas Migueis</span>
-      </div>
-
+      {renderCredits()}
+      <button className='ButtonSearch' onClick={handleShowCredits}>
+        {showCredits === false ? 'Show Credits' : 'Hide Credits'}
+      </button>
     </div>
   );
 }
