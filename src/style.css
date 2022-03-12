@@ -1,0 +1,54 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("images/Tina.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.title {
+    font-size: 60px;
+    color: white;
+    text-shadow: 5px 5px rgba(255, 153, 0, 0.5);
+}
+
+.MainTimerContainer {
+    width: 50%;
+    text-align: center;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px rgba(255, 153, 0, 0.5);
+    min-width: 1000px;
+}
+
+.DisplayTimer {
+    width: 50%;
+    display: inline-block;
+}
+
+p {
+    color: white;
+    font-weight: bold;
+    padding: 20px 0 20px 0;
+    border-radius: 50px;
+    font-size: 80px;
+    background-color: rgb(255, 153, 0);
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px rgba(255, 153, 0, 0.5);
+}
+
+.credits {
+    padding: 2vh;
+    margin-top: 2vh;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 20px;
+    background-color: rgb(255, 153, 0);
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px rgba(255, 153, 0, 0.5);
+}
