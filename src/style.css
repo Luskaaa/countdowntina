@@ -100,21 +100,22 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            background-image: url("images/Tina.jpg");
-            background-size: contain;
+            background-image: url("images/tinaMobile.jpg");
+            background-size: cover;
+            background-position: center;
             overflow: hidden;
         }
         .title {
             font-size: 30px;
             color: white;
-            text-shadow: 5px 5px rgba(255, 153, 0, 0.5);
+            text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
         }
         .MainTimerContainer {
             width: 100%;
             text-align: center;
             border-radius: 20px;
             background-color: rgba(0, 0, 0, 0.5);
-            box-shadow: 5px 5px rgba(255, 153, 0, 0.5);
+            box-shadow: 5px 5px rgba(57, 1, 88, 0.603);
             transform: translateX(-50px);
             animation: opacity .5s forwards;
             min-width: 610px;
@@ -129,9 +130,9 @@
             padding: 20px 0 20px 0;
             border-radius: 50px;
             font-size: 50px;
-            background-color: rgb(255, 153, 0);
+            background: linear-gradient(rgb(60, 1, 94), rgb(65, 1, 102));
             text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
-            box-shadow: 5px 5px rgba(255, 153, 0, 0.5);
+            box-shadow: 5px 5px rgba(57, 1, 88, 0.603);
         }
         @keyframes opacity {
             from {
@@ -158,9 +159,9 @@
             font-weight: bold;
             font-size: large;
             border-radius: 20px;
-            background: linear-gradient(rgb(255, 153, 0), rgb(255, 102, 0));
+            background: linear-gradient(rgb(60, 1, 94), rgb(65, 1, 102));
             text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
-            box-shadow: 3px 3px rgba(255, 255, 255, 1);
+            box-shadow: 5px 5px rgba(57, 1, 88, 0.603);
             transform: translateX(-50px);
             animation: opacity .5s forwards;
             min-width: 160px;
@@ -173,9 +174,9 @@
             font-weight: bold;
             font-size: large;
             border-radius: 20px;
-            background: linear-gradient(rgb(255, 153, 0), rgb(255, 102, 0));
+            background: linear-gradient(rgb(60, 1, 94), rgb(65, 1, 102));
             text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
-            box-shadow: 3px 3px rgba(255, 255, 255, 1);
+            box-shadow: 5px 5px rgba(57, 1, 88, 0.603);
             animation: opacityCredits .5s forwards;
             cursor: pointer;
             border: 0;
