@@ -30,7 +30,6 @@ function App() {
       const now = new Date().getTime();
 
       const remaingDays = dataOfficial - now;
-
       const days = Math.floor(remaingDays / (1000 * 60 * 60 * 24));
       const hours = Math.floor(remaingDays % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
       const minutes = Math.floor((remaingDays % (1000 * 60 * 60)) / (1000 * 60));
