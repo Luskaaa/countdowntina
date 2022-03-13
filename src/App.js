@@ -94,17 +94,18 @@ function App() {
 
 
   return (
-
-    <div className="container">
-      <div className='MainTimerContainer'>
-        <h1 className='title'>Countdown Tiny Tina's</h1>
-        {renderTimer()}
+    <>
+      <div className="container">
+        <div className='MainTimerContainer'>
+          <h1 className='title'>Countdown Tiny Tina's</h1>
+          {renderTimer()}
+        </div>
+        {renderCredits()}
+        <button className='ButtonSearch' onClick={handleShowCredits}>
+          {showCredits === false ? 'Show Credits' : 'Hide Credits'}
+        </button>
       </div>
-      {renderCredits()}
-      <button className='ButtonSearch' onClick={handleShowCredits}>
-        {showCredits === false ? 'Show Credits' : 'Hide Credits'}
-      </button>
-    </div>
+    </>
   );
 }
 
