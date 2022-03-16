@@ -1,12 +1,17 @@
+    html {
+        scroll-behavior: smooth;
+    }
+    
     .container {
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        overflow: hidden;
         background-image: url("images/Tina.jpg");
         background-size: cover;
-        overflow: hidden;
+        z-index: 99;
     }
     
     .title {
@@ -42,6 +47,19 @@
         box-shadow: 5px 5px rgba(255, 153, 0, 0.5);
     }
     
+    .DisplayTimer>p:first-child:hover {
+        animation: dimensions .5s infinite alternate-reverse;
+    }
+    
+    @keyframes dimensions {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+    
     @keyframes opacity {
         from {
             opacity: 0;
@@ -69,9 +87,9 @@
         font-weight: bold;
         font-size: large;
         border-radius: 20px;
-        background: linear-gradient(rgb(255, 153, 0), rgb(255, 102, 0));
+        background-color: rgb(255, 153, 0);
         text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
-        box-shadow: 3px 3px rgba(255, 255, 255, 1);
+        box-shadow: 5px 5px rgba(255, 153, 0, 0.5);
         transform: translateX(-50px);
         animation: opacity .5s forwards;
         max-width: 150px;
@@ -84,9 +102,9 @@
         font-weight: bold;
         font-size: large;
         border-radius: 20px;
-        background: linear-gradient(rgb(255, 153, 0), rgb(255, 102, 0));
+        background-color: rgb(255, 153, 0);
         text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
-        box-shadow: 3px 3px rgba(255, 255, 255, 1);
+        box-shadow: 5px 5px rgba(255, 153, 0, 0.5);
         animation: opacityCredits .5s forwards;
         cursor: pointer;
         border: 0;
