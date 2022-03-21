@@ -1,5 +1,6 @@
 import './style.css';
 import React, { useState, useRef, useEffect } from 'react';
+import { Navbar } from './components/Navbar/Navbar';
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
       return (
         <>
           <div className='credits'>
-            <span> Lucas Migueis</span>
+            <span> Lucas Migueis e Tomás Marques</span>
           </div>
         </>
       )
@@ -76,7 +77,11 @@ function App() {
     return (
       <div className='DisplayTimer'>
         <p className='Days'>{timeDays} Dias</p>
-        <p className='Time'>{timeHours} : {timeMinutes} : {timeSeconds}</p>
+        <section className='Time'>
+          <p>{timeHours} :</p>
+          <p>{timeMinutes} :</p>
+          <p>{timeSeconds}</p>
+        </section>
       </div>
     )
 

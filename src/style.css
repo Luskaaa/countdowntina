@@ -1,65 +1,198 @@
-    html {
-        scroll-behavior: smooth;
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("images/Tina.avif");
+    background-size: cover;
+}
+
+.title {
+    font-size: 60px;
+    color: white;
+    text-shadow: 5px 5px rgba(255, 153, 0, 0.5);
+}
+
+.MainTimerContainer {
+    width: 50%;
+    text-align: center;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px rgba(255, 153, 0, 0.5);
+    min-width: 1000px;
+    transform: translateX(-50px);
+    animation: opacity .5s forwards;
+}
+
+.DisplayTimer {
+    width: 50%;
+    display: inline-block;
+}
+
+.Time {
+    display: flex;
+    justify-content: center;
+}
+
+section p {
+    color: white;
+    font-weight: bold;
+    font-size: 80px;
+    background-color: rgb(255, 153, 0);
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px rgba(255, 153, 0, 0.5);
+    padding: 15px;
+}
+
+section>p:first-child {
+    border-radius: 20px 0 0 20px;
+    padding: 20px;
+}
+
+section>p:last-child {
+    border-radius: 0 20px 20px 0;
+    padding: 20px;
+}
+
+.Days {
+    color: white;
+    font-weight: bold;
+    padding: 20px 0 20px 0;
+    font-size: 80px;
+    border-radius: 40px;
+    background-color: rgb(255, 153, 0);
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px rgba(255, 153, 0, 0.5);
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
     }
-    
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pisca {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes opacityCredits {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.credits {
+    padding: 2vh;
+    margin-top: 2vh;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 20px;
+    background-color: rgb(255, 153, 0);
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px rgba(255, 153, 0, 0.5);
+    transform: translateX(-50px);
+    animation: opacity .5s forwards;
+    max-width: 280px;
+}
+
+.ButtonSearch {
+    padding: 2vh;
+    margin-top: 2vh;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 20px;
+    background-color: rgb(255, 153, 0);
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px rgba(255, 153, 0, 0.5);
+    animation: opacityCredits .5s forwards;
+    cursor: pointer;
+    border: 0;
+}
+
+
+/* Responsive to mobile devices */
+
+@media (max-width: 650px) {
     .container {
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        overflow: hidden;
-        background-image: url("images/Tina.jpg");
+        background-image: url("images/tinaMobile.avif");
         background-size: cover;
-        z-index: 99;
+        background-position: center;
     }
-    
     .title {
-        font-size: 60px;
+        font-size: 30px;
         color: white;
-        text-shadow: 5px 5px rgba(255, 153, 0, 0.5);
+        text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
     }
-    
     .MainTimerContainer {
-        width: 50%;
+        width: 100%;
         text-align: center;
         border-radius: 20px;
         background-color: rgba(0, 0, 0, 0.5);
-        box-shadow: 5px 5px rgba(255, 153, 0, 0.5);
-        min-width: 1000px;
+        box-shadow: 5px 5px rgba(57, 1, 88, 0.603);
         transform: translateX(-50px);
         animation: opacity .5s forwards;
+        min-width: 610px;
     }
-    
     .DisplayTimer {
         width: 50%;
         display: inline-block;
     }
-    
-    p {
+    .Time {
+        display: flex;
+        justify-content: center;
+    }
+    .Days {
         color: white;
         font-weight: bold;
         padding: 20px 0 20px 0;
-        border-radius: 50px;
         font-size: 80px;
-        background-color: rgb(255, 153, 0);
+        border-radius: 40px;
+        background: linear-gradient(rgb(60, 1, 94), rgb(65, 1, 102));
         text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
-        box-shadow: 5px 5px rgba(255, 153, 0, 0.5);
+        box-shadow: 5px 5px rgba(57, 1, 88, 0.603);
     }
-    
-    .DisplayTimer>p:first-child:hover {
-        animation: dimensions .5s infinite alternate-reverse;
+    section p {
+        color: white;
+        font-weight: bold;
+        font-size: 50px;
+        padding: 10px;
+        background: linear-gradient(rgb(60, 1, 94), rgb(65, 1, 102));
+        text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: 5px 5px rgba(57, 1, 88, 0.603);
     }
-    
-    @keyframes dimensions {
-        from {
-            opacity: 1;
-        }
-        to {
-            opacity: 0;
-        }
+    section>p:first-child {
+        border-radius: 20px 0 0 20px;
+        padding: 10px;
     }
-    
+    section>p:last-child {
+        border-radius: 0 20px 20px 0;
+        padding: 10px;
+    }
     @keyframes opacity {
         from {
             opacity: 0;
@@ -69,7 +202,6 @@
             transform: translateX(0);
         }
     }
-    
     @keyframes opacityCredits {
         from {
             opacity: 0;
@@ -79,7 +211,6 @@
             transform: translateY(0);
         }
     }
-    
     .credits {
         padding: 2vh;
         margin-top: 2vh;
@@ -87,14 +218,14 @@
         font-weight: bold;
         font-size: large;
         border-radius: 20px;
-        background-color: rgb(255, 153, 0);
+        background: linear-gradient(rgb(60, 1, 94), rgb(65, 1, 102));
         text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
-        box-shadow: 5px 5px rgba(255, 153, 0, 0.5);
+        box-shadow: 5px 5px rgba(57, 1, 88, 0.603);
         transform: translateX(-50px);
         animation: opacity .5s forwards;
-        max-width: 150px;
+        min-width: 160px;
+        text-align: center;
     }
-    
     .ButtonSearch {
         padding: 2vh;
         margin-top: 2vh;
@@ -102,102 +233,12 @@
         font-weight: bold;
         font-size: large;
         border-radius: 20px;
-        background-color: rgb(255, 153, 0);
+        background: linear-gradient(rgb(60, 1, 94), rgb(65, 1, 102));
         text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
-        box-shadow: 5px 5px rgba(255, 153, 0, 0.5);
+        box-shadow: 5px 5px rgba(57, 1, 88, 0.603);
         animation: opacityCredits .5s forwards;
         cursor: pointer;
         border: 0;
+        min-width: 160px;
     }
-    /* Responsive to mobile devices */
-    
-    @media (max-width: 650px) {
-        .container {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            background-image: url("images/tinaMobile.jpg");
-            background-size: cover;
-            background-position: center;
-            overflow: hidden;
-        }
-        .title {
-            font-size: 30px;
-            color: white;
-            text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
-        }
-        .MainTimerContainer {
-            width: 100%;
-            text-align: center;
-            border-radius: 20px;
-            background-color: rgba(0, 0, 0, 0.5);
-            box-shadow: 5px 5px rgba(57, 1, 88, 0.603);
-            transform: translateX(-50px);
-            animation: opacity .5s forwards;
-            min-width: 610px;
-        }
-        .DisplayTimer {
-            width: 50%;
-            display: inline-block;
-        }
-        p {
-            color: white;
-            font-weight: bold;
-            padding: 20px 0 20px 0;
-            border-radius: 50px;
-            font-size: 50px;
-            background: linear-gradient(rgb(60, 1, 94), rgb(65, 1, 102));
-            text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
-            box-shadow: 5px 5px rgba(57, 1, 88, 0.603);
-        }
-        @keyframes opacity {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        @keyframes opacityCredits {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .credits {
-            padding: 2vh;
-            margin-top: 2vh;
-            color: white;
-            font-weight: bold;
-            font-size: large;
-            border-radius: 20px;
-            background: linear-gradient(rgb(60, 1, 94), rgb(65, 1, 102));
-            text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
-            box-shadow: 5px 5px rgba(57, 1, 88, 0.603);
-            transform: translateX(-50px);
-            animation: opacity .5s forwards;
-            min-width: 160px;
-            text-align: center;
-        }
-        .ButtonSearch {
-            padding: 2vh;
-            margin-top: 2vh;
-            color: white;
-            font-weight: bold;
-            font-size: large;
-            border-radius: 20px;
-            background: linear-gradient(rgb(60, 1, 94), rgb(65, 1, 102));
-            text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
-            box-shadow: 5px 5px rgba(57, 1, 88, 0.603);
-            animation: opacityCredits .5s forwards;
-            cursor: pointer;
-            border: 0;
-            min-width: 160px;
-        }
-    }
+}
